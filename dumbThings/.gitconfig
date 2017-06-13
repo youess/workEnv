@@ -1,22 +1,22 @@
 [user]
-	name = denis
+  name = denis
   email = denis_lton@hotmail.com
 [credential]
-	helper = store
+  helper = store
 [color]
-	ui = true
+  ui = true
 [core]
-	editor = vim
-	autocrlf = false
-	safecrlf = true
+  editor = vim
+  autocrlf = false
+  safecrlf = true
 [alias]
-	st = status
-	cm = commit
-	br = branch
-	co = checkout
-	last = log
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  st = status
+  cm = commit
+  br = branch
+  co = checkout
+  last = log
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [http]
-	sslVerify = false
+  sslVerify = false
 [push]
-	default = simple
+  default = simple

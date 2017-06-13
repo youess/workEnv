@@ -7,8 +7,12 @@ import sys
 import os.path as op
 import subprocess
 import argparse
+import git
+from datetime import datetime
 
 sync_list = ['.vimrc', '.cheat', '.gitconfig', '.config']
+repo = git.Repo(op.dirname(__file__))
+today_int = datetime.today().strftime("%Y%m%d")
 
 FNULL = open(os.devnull, 'w')
 status = subprocess.call(
@@ -67,6 +71,17 @@ if args.from_local:
             sf,
             CONFIG_DIR
         )
+    # add the change and commit it
+    if repo.untracked_files or repo.is_dirty():
+        print(repo.git.status())
+        repo.index.add(repo.untracked_files)
+        changed_files = [item.a_path for item in repo.index.diff(None)]
+        repo.index.add(changed_files)
+        repo.index.commit("Auto-sync Task at Day: {}".format(today_int))
+        print("正在上传到远程git项目.")
+        repo.remotes.origin.push()
+        print("上传成功!")
+        print(repo.git.status())
 elif args.to:
     sync_file_list = [op.join(CONFIG_DIR, p) for p in os.listdir(CONFIG_DIR)]
     for sf in sync_file_list:
@@ -74,6 +89,9 @@ elif args.to:
             sf,
             os.environ.get("HOME")
         )
+    print("正在从远端同步文件")
+    repo.remotes.origin.pull()
+    print("从远端同步文件成功!")
 else:
     parser.print_help()
     print("Nothing did!")
