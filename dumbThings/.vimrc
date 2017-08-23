@@ -259,9 +259,9 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 " enable the menu and pydoc preview to get most useful information
 set completeopt=menuone,longest,preview
 " when there is a dot completion in python script, occuring freezing
-let g:pymode_rope = 0
-let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_lookup_project = 0
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope = 0
 let g:pymode_rope_guess_project = 0
 " For conceal markers.
 if has('conceal')
