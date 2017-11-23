@@ -302,7 +302,7 @@ Plugin 'vim-scripts/LargeFile'
 " ====================== python程序插件 ======================
 
 " python mode
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 " 自动删除python脚本中多余的空格
 func! DeleteTrailingWS()
   exe "normal mz"
@@ -311,8 +311,8 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 " python语法检查工具
-Plugin 'scrooloose/syntastic'
-let g:syntastic_python_checkers = ['pylint']
+"Plugin 'scrooloose/syntastic'
+"let g:syntastic_python_checkers = ['pylint']
 
 " ===================== R整合为轻度IDE =====================
 
