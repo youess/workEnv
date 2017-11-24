@@ -302,7 +302,10 @@ Plugin 'vim-scripts/LargeFile'
 " ====================== python程序插件 ======================
 
 " python mode
-"Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
+let g:pymode_python = 'python3'
+let g:pymode_syntax = 0
+
 " 自动删除python脚本中多余的空格
 func! DeleteTrailingWS()
   exe "normal mz"
