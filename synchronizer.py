@@ -116,7 +116,7 @@ def git_push_if(repo):
 
 def git_pull_if(repo):
     """Check remote update and pull changes to local"""
-    repo.remtoes.origin.fetch()
+    repo.remotes.origin.fetch()
 
 
 def run(**opt):
