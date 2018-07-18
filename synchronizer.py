@@ -70,7 +70,7 @@ def sync_helper(src, dest, verbose=False):
     保证两边文件是相同的, 如果目标文件夹dest中没有来源文件夹src中的文件
     就删除
     """
-    cmd = '''rsync -rp {src} {dest} '''.format(src=src, dest=dest)
+    cmd = '''rsync -rp --cvs-exclude {src} {dest} '''.format(src=src, dest=dest)
     cmd += ' --delete --delete-after'
     if verbose:
         cmd_info = subprocess.Popen(cmd, shell=True,
