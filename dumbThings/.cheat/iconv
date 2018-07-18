@@ -1,6 +1,0 @@
-
-# convert utf-8 to gbk
-iconv -f utf-8 -t gbk input_file -o output_file
-
-# list encoding names
-iconv -l

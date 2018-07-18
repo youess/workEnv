@@ -1,3 +1,7 @@
 
 
-dumbThings.tar.gz
+*.pyc
+*.swp
+__pycache__
+tags
+.git

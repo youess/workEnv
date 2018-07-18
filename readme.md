@@ -1,22 +1,11 @@
 
 
-# 用来配置自己的工作环境
+# 同步本地配置文件
 
-## docker
-
-配置自己的ubuntu工作环境，zsh + vim
-
-## dumbsThings
-
-主要是一些自己的dotfiles, 可以通过sync_config.py文件进行同步
+同步HOME目录下，可选择的文件或文件夹
 
 
-```
-usage: sync_config.py [-h] [--from] [--to]
+通过rsync同步并上传或者下载并覆盖本地文件夹
 
-optional arguments:
-  -h, --help  show this help message and exit
-  --from      Sync local machine home config files to this repository.
-  --to        Sync this repository files to local machine home direcotry. Do
-              not use it with --from option
-```
+
+
