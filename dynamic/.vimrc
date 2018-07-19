@@ -23,6 +23,10 @@ Plugin 'scrooloose/nerdtree'
 nnoremap <F2> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['*.out', '*.obj', '*.exe']
 Plugin 'scrooloose/nerdcommenter'
+" make comment with a space
+let g:NERDSpaceDelims=0
+let g:NERDCompactSexyComs=1
+let g:NERDDefaultAlign="left"
 
 " 移动方便, ',,w'
 Plugin 'easymotion/vim-easymotion'
@@ -51,6 +55,7 @@ Plugin 'kien/ctrlp.vim'
 
 " 删除最后留白
 Plugin 'ntpeters/vim-better-whitespace'
+map <leader><Space> :FixWhitespace<CR>
 
 " you complete me, 完整安装还需要切到bundle目录下进行./install.py
 " --cpp,go等插件安装
@@ -113,8 +118,31 @@ set nocompatible
 " vim自身命令行模式智能补全
 set wildmenu
 
-" zhi neng 自动缩进
+" 智能自动缩进
+set autoindent
 set smartindent
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+if has("autocmd")
+    " autocmd FileType r,css,html,javascript setlocal ts=2 sts=2 sw=2
+    autocmd FileType py set ts=4 sts=4 sw=4
+endif
+set smarttab
+set expandtab
+set shiftround
+set hidden
+set wildmode=list:longest
+set ttyfast
+set magic
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" 光标不闪烁
+set gcr=a:block-blinkon0
+
+" 自动重新加载文件如果外部修改了当前打开的文件
+set autoread
 
 " 更改J, K移动距离
 "nmap J 5j
@@ -147,6 +175,9 @@ set showmatch
 
 " 总是显示状态
 set laststatus=2
+
+" paste mode 切换
+set pastetoggle=<leader>5
 
 " 配色
 " 挑选配色网址: http://bytefluent.com/vivify/
