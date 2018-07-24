@@ -55,7 +55,6 @@ Plugin 'kien/ctrlp.vim'
 
 " 删除最后留白
 Plugin 'ntpeters/vim-better-whitespace'
-map <leader><Space> :FixWhitespace<CR>
 
 " you complete me, 完整安装还需要切到bundle目录下进行./install.py
 " --cpp,go等插件安装
@@ -93,12 +92,6 @@ syntax on
 " 检测文件类型
 filetype on
 
-" 设定tab长度为4
-set tabstop=4
-
-" 设定 << 和 >> 命令移动 宽度为4
-set shiftwidth=4
-set smarttab
 
 " 覆盖文件 不备份
 set nobackup
@@ -118,21 +111,31 @@ set nocompatible
 " vim自身命令行模式智能补全
 set wildmenu
 
+" 忽略匹配的文件
+set wildignore=*.swp,*.bak,*.pyc,*.out
+set wildmode=list:longest
+
 " 智能自动缩进
 set autoindent
 set smartindent
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" 设定tab长度为4
+set tabstop=4
+" 设定 << 和 >> 命令移动 宽度为4
+set shiftwidth=4
+set smarttab
+
+" stricter rules for C programs
+set cindent
+
+" 设置space替代tab的输入
+set expandtab
+set softtabstop=0
 if has("autocmd")
     " autocmd FileType r,css,html,javascript setlocal ts=2 sts=2 sw=2
     autocmd FileType py set ts=4 sts=4 sw=4
 endif
-set smarttab
-set expandtab
 set shiftround
 set hidden
-set wildmode=list:longest
 set ttyfast
 set magic
 set backspace=eol,start,indent
