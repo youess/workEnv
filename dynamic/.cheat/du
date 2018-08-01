@@ -1,0 +1,9 @@
+# To sort directories/files by size
+du -sk *| sort -rn
+
+# To show cumulative humanreadable size
+du -sh
+
+# show directory size
+# df -h  # 查看磁盘利用情况
+find . -maxdepth 2 -type d | xargs -I{} du -s {} | sort -nr | head -n 10 | awk '{print $1/1024"M",$2}'
