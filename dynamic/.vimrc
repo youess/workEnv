@@ -50,7 +50,7 @@ let Tlist_Exit_OnlyWindow=1      " 最后一个窗口就推出
 let Tlist_Use_Right_Window=1     " 右侧显示窗口
 let Tlist_File_Fold_Auto_Close=1 " 自动折叠
 
-" ctrl + p
+" ctrl + p, 搜索buffer
 Plugin 'kien/ctrlp.vim'
 
 " 删除最后留白
@@ -62,6 +62,9 @@ Plugin 'Valloric/YouCompleteMe'
 
 " json tools
 Plugin 'elzr/vim-json'
+
+" 异步语法检查
+Plugin 'w0rp/ale'
 
 " colorscheme
 Plugin 'vim-scripts/256-jungle'
@@ -133,6 +136,8 @@ set softtabstop=0
 if has("autocmd")
     " autocmd FileType r,css,html,javascript setlocal ts=2 sts=2 sw=2
     autocmd FileType py set ts=4 sts=4 sw=4
+
+    autocmd BufNewFile,BufRead *.hql set syntax=sql
 endif
 set shiftround
 set hidden
