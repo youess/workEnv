@@ -68,3 +68,8 @@ d{motion}       delete text that {motion} moves over
 
 # install pkg from command
 vim "+PluginInstall" "+PluginClean" +qa
+
+# record marco
+q<letter><commands>q  # to create
+@<letter>             # to call
+
