@@ -64,7 +64,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
 
 " 异步语法检查
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
 
 " colorscheme
 Plugin 'vim-scripts/256-jungle'

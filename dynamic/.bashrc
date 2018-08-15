@@ -84,6 +84,5 @@ fi
 # alias ohmybash="mate ~/.oh-my-bash"
 
 export EDITOR=vim
-eval $(thefuck --alias)
 
 alias md="sudo mount -t vboxsf sd /mnt/"
