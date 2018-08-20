@@ -1,0 +1,22 @@
+{
+    "editor.tabCompletion": true,
+    "terminal.integrated.rendererType": "dom",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "python.pythonPath": "/usr/bin/python3",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "vscode-great-icons",
+    "window.zoomLevel": 1,
+    "sync.gist": "63d3d9f452053a63f387f7c514db6709",
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastUpload": "2018-08-17T11:20:46.922Z",
+    "sync.lastDownload": "",
+    "sync.forceDownload": false
+}
